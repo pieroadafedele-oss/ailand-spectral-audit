@@ -71,9 +71,7 @@ The largest eigenvalue of B is degenerate: one arbitrarily selected dominant eig
 
 ## Verification and limitations
 
-The numerical results were recalculated independently using NumPy during review. The user then directly executed focused checks in **Wolfram Cloud** on 9 October 2026: the two entropies, numerically sorted Gram spectra, and dominant eigenvalue multiplicities (`{1,2}`) matched the corrected values.
-
-**Important:** these focused checks do *not* establish that an entire future WL package has been tested. They also do not validate a biological interpretation.
+The numerical results were recalculated independently using NumPy during review. The author first executed focused checks in **Wolfram Cloud** on 9 October 2026. The author then copied and ran the complete GitHub file [`AILAND_SpectralAudit_v1_1.wl`](AILAND_SpectralAudit_v1_1.wl) in Wolfram Cloud and returned its output: **all six regression checks were `True`** (EntropyA, EntropyB, SpectrumA, SpectrumB, DominantMultiplicity, IsolatedNodesB). The returned entropies were A = 2.22102700842 bits and B = 2.25656476213 bits. The output was user-supplied; this is not an independent remote kernel attestation. **The test does not constitute experimental biological validation.**
 
 - The examples are static, manually specified hypergraphs.
 - The full hypergraphs are not isomorphic (they even have different numbers of nodes).
@@ -81,9 +79,12 @@ The numerical results were recalculated independently using NumPy during review.
 - The incidence-matrix Gram construction can conceal isolated nodes; spectra do not reconstruct the whole hypergraph.
 - No protein-folding measurements, posture measurements, physical dynamics, relaxation model or causal mechanism have been established by these examples.
 
-## Reproducibility plan
+## Reproduction files
 
-The Wolfram Language audit source and the English correction text are to be added as separate versioned files. Do not interpret their absence at this initial commit as a completed software or experimental verification.
+- [`AILAND_SpectralAudit_v1_1.wl`](AILAND_SpectralAudit_v1_1.wl): the full tested Wolfram Language source.
+- [`CORRECTION_v1_1.md`](CORRECTION_v1_1.md): the English technical correction and limitations.
+
+Note: the WL source header was authored before the complete run and refers to the test as pending; this README records the subsequent successful execution without silently modifying the tested source.
 
 ## Attribution
 
