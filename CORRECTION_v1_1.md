@@ -63,9 +63,9 @@ Inputs, corrected numerical values and code are included in this repository:
 - [README](README.md) — assumptions, full hyperedge inputs and results;
 - [Wolfram Language audit](AILAND_SpectralAudit_v1_1.wl) — incidence matrices and numerical/regression checks.
 
-The main numerical values were independently recalculated using NumPy during revision. Focused Wolfram Cloud checks run by the author on **9 October 2026** reproduced both entropy values, both descending spectra and the dominant multiplicities \(\{1,2\}\).
+The main numerical values were independently recalculated using NumPy during revision. On **9 October 2026**, the author reproduced both entropy values, both descending spectra and dominant multiplicities \(\{1,2\}\) using focused checks in Wolfram Cloud. The author subsequently copied and ran the **entire** linked `.wl` source in Wolfram Cloud and returned its output: **all six regression checks evaluated to `True`** (two entropy checks, two spectrum checks, dominant multiplicity and three isolated nodes in example B).
 
-**Verification boundary:** those focused checks are not a recorded execution of the entire separate WL audit file, and neither the computations nor this correction constitute validation of the motivating biological hypotheses.
+**Verification boundary:** the run output is provided by the author rather than by an independently attested Wolfram environment. The successful computational checks do **not** validate the motivating biological hypotheses or infer physical causation.
 
 ## 5. Research status
 
